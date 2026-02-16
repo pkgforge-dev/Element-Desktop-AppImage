@@ -24,7 +24,7 @@ esac
 TARBALL=https://packages.element.io/desktop/install/linux/glibc-"$tarball_arch"/element-desktop.tar.gz
 wget "$TARBALL" -O /tmp/tarball.tar.gz
 tar xfv /tmp/tarball.tar.gz
-echo ./element-desktop-* | awk -F'-' '{print $NF; exit}' ~/version
+echo ./element-desktop-* | awk -F'-' '{print $NF; exit}' > ~/version
 
 mkdir -p ./AppDir/bin
 mv -v ./element-desktop-*/* ./AppDir/bin
